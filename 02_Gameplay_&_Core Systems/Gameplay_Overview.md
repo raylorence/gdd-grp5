@@ -5,38 +5,45 @@
 
 ```mermaid
 graph TD
-	exploration[Primary Action / Exploration]
-	combat[Encounter Challenge / Combat]
-	rewards[Collect Resources / Rewards]
-	upgrade[Upgrade / Customize]
-	exploration --> combat --> rewards --> upgrade --> exploration
+    recon[1. Reconnaissance<br>Scout patrol routes, flashlight sweeps, and choke points]
+    explore[2. Exploration & Movement<br>Sneak through narrow alleys and gather intel/tools]
+    distract[3. Environmental Distraction<br>Throw bottles, trigger generators, throw switchboards]
+    hide[4. Active Hiding & Suppression<br>Conceal in barrels/alcoves, suppress breathing and panic]
+    
+    recon --> explore
+    explore --> distract
+    distract --> hide
+    hide --> recon
 ```
 
-> [!hint] You can link each action to its own page.
-
-- **[[Exploration]]:** Write a short description of how this mechanic is experienced by the player.
-- **[[Combat]]:** Write a short description of how this mechanic is experienced by the player.
-- **[[Rewards]]:** Write a short description of how this mechanic is experienced by the player.
-- **[[Upgrade]]:** Write a short description of how this mechanic is experienced by the player.
+- **[[Reconnaissance]]:** Players observe enemy patrol trajectories, study flashlight patterns, and selectively utilize their smartphone to reveal objective headings and radio chatter, balancing exposure against signal interception.
+- **[[Exploration]]:** Navigating narrow alleyways, squatter corridors, zinc roof overhangs, and dead ends of Tondo while scavenging one-time bypass tools (crowbars, wire cutters) and narrative evidence.
+- **[[Distraction]]:** Interacting with physical debris (throwing empty bottles, dislodging hanging galvanized metal sheets, tampering with wiring) to peel guards away from essential doorways and corridors.
+- **[[Active Hiding]]:** Slipping behind clotheslines, interior alcoves, or beneath empty water drums when line of sight is broken. Shifts perspective to a first-person dynamic vignette where panic level and breathing must be held manually to avoid alerting passing guards.
 
 # Controls & [[Player Actions]]
 > [!info] Guideline
 > Map system inputs to specific in-game actions, output behavior, and operational constraints.
 > > [!tip] Attach an image of the controller you wish to use with the actions mapped out.
 
-- **Camera View:** (e.g., Top-down isometric, 3rd-person over-the-shoulder, 2D side-scroller)
-- **Movement Profile:** (e.g., High-velocity, momentum-based, grid-based, turn-based)
+- **Camera View:** 2D Top-Down perspective during movement and navigation; switches dynamically to an immersive, claustrophobic 1st-Person Vignette during Active Hiding states.
+- **Movement Profile:** Precise multi-directional grid/free 8-way movement; distinct noise footprint contrast between crouching/slow walking and sprinting.
 
-| Input                    | Action             | Context / Notes                               |
-| ------------------------ | ------------------ | --------------------------------------------- |
-| `W/A/S/D` / `Left Stick` | [[Movement]]       | Analog movement sensitivity applied           |
-| `Space`/ `Button South`  | [[Jump]]           | Hold to extend jump height                    |
-| `LShift` / `Button East` | [[Dash]]           | Grants 0.2s invulnerability frames (i-frames) |
-| `J` / `Button West`      | [[Primary Attack]] | 3-hit combo chain                             |
+| Input               | Action                      | Context / Notes                                                                                                    |
+| ------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `W / A / S / D`     | [[Movement]]                | Standard walking speed; minimal sound emission radius ($r = 1.5\text{ m}$).                                        |
+| `Left Shift`        | [[Sprint]]                  | Increases traversal speed by 80%; expends stamina and dramatically increases audio footprint ($r = 6.0\text{ m}$). |
+| `E`                 | [[Interact]]                | Operates doors, gathers collectible documents, throws switches, and Enters/Exits hiding spots.                     |
+| `Right Click` / `F` | [[Aim & Throw Distraction]] | Displays targeted trajectory arc to toss scavenged debris (bottles, stones, scrap).                                |
+| `Space` (Hold)      | [[Breath Suppression]]      | Active during Hiding state; stops protagonist's heavy breathing while slowly building the Panic meter.             |
+| `Tab`               | [[Toggle Smartphone]]       | Opens digital map and intercepted radio feeds; continuously raises the enemy Digital Trace Level while deployed.   |
 ## Game Rules & Logic
 > [!info] Guideline
 > Define the operational boundary rules, victory/defeat criteria, and state-persistence systems governing the game session.
-- **Win Condition**: Explicit criteria required to complete a level, run, or entire game session (e.g., Defeat the final boss, reach the extraction point, survive for 10 minutes.)
-- **Fail Condition:** Explicit criteria that trigger a loss state or session reset (e.g., Player health drops to 0, mission timer reaches zero, target asset is destroyed.)
-- **Failure Penalty:** Systemic consequences of failure (e.g., Loss of unbanked resources, respawn at last checkpoint, complete run restart.)
-- **Save & Persistence System:** Architecture for saving progress (e.g., Automatic saving at designated checkpoints, manual save files, persistent character unlocks across sessions.)
+- **Win Condition:** Safely traverse all urban sectors (Alleyways, Commercial Market, Drainage Canal, Safehouse Perimeter) without full apprehension, delivering intact evidence to the resistance safehouse.
+- **Fail Condition:**
+  1. Caught within the capture perimeter of a militarized police officer.
+  2. Sustaining direct line of sight in open light without cover for longer than the detection grace timer.
+  3. Failure of the Breath Suppression minigame while an investigator searches the immediate hiding radius.
+- **Failure Penalty:** Session reloads at the most recent Sector Safe Zone / Infiltration Checkpoint. Run statistics penalize "Times Spotted" and calculate lower end-of-run stealth ratings.
+- **Save & Persistence System:** Segment-based automatic checkpointing when transitioning major sector gates. System preserves collected documents, unlocked shortcut gates, and unlocked branch paths into the profile save file.
