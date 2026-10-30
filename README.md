@@ -1,18 +1,16 @@
 # 00_Studio_Profile
 
-> [!info] Guideline
-> Establish the studio identity, and core mission, and central resource links for team access.
-
-> [!hint]
-> Insert studio logo here.
+> ![Pa-north Game Studio Logo](assets/studio_logo.png)
 ## Studio Tagline / Mission:
 
 > [!info]
-> 1-sentence summary of the team's identity or goal.
+> Crafting atmospheric, narrative-driven Philippine survival experiences that explore vulnerability, tension, and social realism through evocative interactive mechanics.
 
 # Team Directory & Member Roles
-| Member Role  | Primary Role         | Secondary Discipline | Core Responsibilities                                   | Contact / Handles    |
-| ------------ | -------------------- | -------------------- | ------------------------------------------------------- | -------------------- |
-| Mama mo Test | Team Lead / Producer | Mechanics Designer   | Project tracking, GDD maintenance, enemy AI programming | Discord: `@username` |
-| Name 2       | Lead Programmer      | Systems Architect    | Character controller, Game Architecture                 | Discord: `@username` |
-| Name 3       | Lead Artist          | UI/UX Designer       | Sprite sheets, environment assets, HUD assets           | Discord: `@username` |
+| Member Role                    | Primary Role               | Secondary Discipline      | Core Responsibilities                                                          | Contact / Handles |
+| ------------------------------ | -------------------------- | ------------------------- | ------------------------------------------------------------------------------ | ----------------- |
+| Cabauatan, Raymond Laurence L. | Project Lead / Producer    | Systems Designer          | Project tracking, milestone management, documentation, level integration       | Discord:          |
+| Crispospolo, Chanel Allyson R. | Lead Programmer            | AI & Systems Architect    | Top-down controller, soldier vision cones/patrol state machines, trace system  | Discord:          |
+| Marquez, Nicole Louise B.      | Lead Artist                | UI / UX Designer          | Top-down environment tilesets, character sprites, dynamic hiding vignette, HUD | Discord:          |
+| Martinez, Tristan Mark P.      | Narrative & Sound Designer | Level Designer            | Lore, environmental storytelling, ambient audioscapes, SFX detection profiles  | Discord:          |
+| Pecayo, Miguel Alfonso D.      | Technical Designer         | Mechanics & QA Specialist | Breath suppression minigame, bypass puzzle logic, playtesting analytics        | Discord:          |

@@ -1,36 +1,40 @@
-> [!info] Guideline
-> Provide a high-level summary of the game concept. Focus on the core user experience, primary mechanic, and objectives rather than detailed background lore
 # High Concept & Pitch
 
 > [!info] Game Title
-> Insert Game Title Image here.
+> # Shadows of the Regime
+> ![Game Title Logo](assets/game_title_logo.png)
 
 > [!info] Elevator Pitch
-> 1-2 sentence pitch summarizing the player experience, key mechanic, and objective.
-> > [!hint] Formula
-> > You play as (Role) who must (Core Action) using (Unique Mechanic) to achieve (Ultimate Goal)
+> You play as an ordinary resistance courier who must navigate a heavily patrolled, labyrinthine informal settlement in Tondo using environmental distractions and high-risk evasion mechanics to deliver vital evidence to an underground safehouse without being caught by militarized police forces.
 
 ## Genre
 > [!info] Genre, Mode, and Mood
-> Identify 1-2 primary genres and then add supporting genres that also help define the mechanics, structure, and aesthetics
+> - **Primary Genre:** Survival Stealth Horror
+> - **Supporting Genres:** Top-Down Puzzle Stealth, Psychological Thriller, Narrative Historical Fiction
+> - **Perspective & Mode:** Top-Down 2D Exploration shifting to 1st-Person Vignette during active hiding; Single-player offline run-based campaign
+> - **Atmospheric Mood:** Claustrophobic, oppressive, tense, gritty, grounded
 
 ## Target Audience
 > [!info]
-> Who loves this type of game? Who are the types of players outside your core audience that you also wish to play?
+> - **Primary Audience:** Core fans of atmospheric indie stealth and tension-driven survival horror (e.g., *Little Nightmares*, *Five Nights at Freddy's: Into the Pit*, *Signalis*) aged 16–30 who value tactical stealth, vulnerability, and micro-decision-making under pressure.
+> - **Secondary Audience:** Players interested in narrative-driven historical fiction, sociopolitical alternate realities, and Philippine cultural settings, as well as speedrunners seeking optimized routing through tight stealth systems.
 
 ## Target Platforms
 > [!info]
-> Where will people play this?
+> - **Primary Platform:** PC (Steam / Itch.io)
+> - **Hardware Baseline:** Low-to-mid range PC/Laptop configurations (Intel Core i3/i5, 8GB RAM, integrated or GTX 1050+ graphics) to guarantee wide accessibility for local student and indie gaming demographics.
 
 # Core Pillars
 > [!info]
-> Define 3-5 non-negotiable design principles that guide all mechanical and stylistic decisions
+> Five non-negotiable design principles guiding all mechanical, narrative, and stylistic implementations.
 
-| Pillar      | Concept               | Impact on Gameplay                                   |
-| ----------- | --------------------- | ---------------------------------------------------- |
-| Pillar Name | Short core philosophy | How this directly shapes mechanics or design choices |
-| Pillar Name | Short core philosophy | How this directly shapes mechanics or design choices |
-| Pillar Name | Short core philosophy | How this directly shapes mechanics or design choices |
+| Pillar                       | Concept                                                            | Impact on Gameplay                                                                                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **The "Nobody" Protagonist** | You are an ordinary civilian, not a trained commando or combatant. | The player cannot attack, neutralize, or physically overpower guards. Every defensive solution is environmental, observational, or evasive.                        |
+| **Fragile Survival**         | A single misstep or compromise leads to a swift capture.           | Checkpoints are unforgiving; direct detection means lethal or immediate capture states unless broken via sight obstruction and rapid hiding.                       |
+| **Silence is Survival**      | Every auditory stimulus is physically tracked by AI.               | Sprinting, knocking objects, and opening rusted gates emit perceptible acoustic radii that trigger patrol investigations.                                          |
+| **Atmospheric Dread**        | Psychological tension over cheap jump shocks.                      | Dread is built via dynamic shadows, flickering incandescent alley bulbs, sweeping flashlights, and claustrophobic spatial layout rather than scripted jump scares. |
+| **Improvisation**            | The environment is your sole shield and diversion tool.            | Progress relies on throwing discarded debris, toggling street breaker boxes, exploiting narrow squatter roof conduits, and utilizing situational bypass tools.     |
 
 
 
