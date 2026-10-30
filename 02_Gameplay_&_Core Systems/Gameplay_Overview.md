@@ -5,21 +5,42 @@
 
 ```mermaid
 graph TD
-    recon[1. Reconnaissance<br>Scout patrol routes, flashlight sweeps, and choke points]
-    explore[2. Exploration & Movement<br>Sneak through narrow alleys and gather intel/tools]
-    distract[3. Environmental Distraction<br>Throw bottles, trigger generators, throw switchboards]
-    hide[4. Active Hiding & Suppression<br>Conceal in barrels/alcoves, suppress breathing and panic]
-    
-    recon --> explore
-    explore --> distract
-    distract --> hide
-    hide --> recon
+    subgraph "Phase 1: Reconnaissance"
+        A[Observe Flashlight Angles] --> B[Assess Audio Ambient Noise]
+        B --> C[Check Smartphone Intel<br>Risk: Trace Meter Accumulation]
+    end
+
+    subgraph "Phase 2: Tactical Traversal"
+        C --> D[Identify Safe Route or Chokepoint]
+        D --> E{Is Route Blocked?}
+        E -- No --> F[Crouch / Sneak Forward]
+        E -- Yes --> G[Phase 3: Environmental Action]
+    end
+
+    subgraph "Phase 3: Environmental Action"
+        G --> H[Toss Distraction Item<br>Bottles / Cans / Scrap]
+        G --> I[Interact with Breaker Box / Tools]
+        H --> J[Lure Guard Cones Away]
+        I --> J
+    end
+
+    subgraph "Phase 4: Concealment & Evasion"
+        J --> K{Guard Approaching?}
+        K -- Yes --> L[Enter Hiding Spot<br>Switch to 1st-Person Vignette]
+        L --> M[Execute Breath & Panic Suppression]
+        M --> N[Guard Clears Area]
+        N --> A
+        K -- No --> F
+    end
+
+    F --> O[Reach Sector Checkpoint / Safehouse]
 ```
 
-- **[[Reconnaissance]]:** Players observe enemy patrol trajectories, study flashlight patterns, and selectively utilize their smartphone to reveal objective headings and radio chatter, balancing exposure against signal interception.
-- **[[Exploration]]:** Navigating narrow alleyways, squatter corridors, zinc roof overhangs, and dead ends of Tondo while scavenging one-time bypass tools (crowbars, wire cutters) and narrative evidence.
-- **[[Distraction]]:** Interacting with physical debris (throwing empty bottles, dislodging hanging galvanized metal sheets, tampering with wiring) to peel guards away from essential doorways and corridors.
-- **[[Active Hiding]]:** Slipping behind clotheslines, interior alcoves, or beneath empty water drums when line of sight is broken. Shifts perspective to a first-person dynamic vignette where panic level and breathing must be held manually to avoid alerting passing guards.
+### Detailed Loop Breakdown
+1. **[[Reconnaissance]]:** The player assesses guard routes, sweeping flashlight arcs, and ambient sound surfaces. Players may briefly consult their smartphone for map coordinates, incurring [[Mechanics_Deep_Dive#2-digital-risk-smartphone-trace-system|Digital Risk]].
+2. **[[Exploration]]:** Traversing claustrophobic alley corridors, shanty overhangs, and drainage pipes while scavenging single-use bypass gear.
+3. **[[Distraction]]:** Utilizing physics debris or electrical switches to force patrol units away from critical chokepoints.
+4. **[[Active Hiding]]:** Slipping into drums, alcoves, or beneath tarps when line of sight is broken, transitioning to an immersive first-person viewpoint where physiological panic must be actively mitigated.
 
 # Controls & [[Player Actions]]
 > [!info] Guideline
@@ -29,14 +50,14 @@ graph TD
 - **Camera View:** 2D Top-Down perspective during movement and navigation; switches dynamically to an immersive, claustrophobic 1st-Person Vignette during Active Hiding states.
 - **Movement Profile:** Precise multi-directional grid/free 8-way movement; distinct noise footprint contrast between crouching/slow walking and sprinting.
 
-| Input               | Action                      | Context / Notes                                                                                                    |
-| ------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `W / A / S / D`     | [[Movement]]                | Standard walking speed; minimal sound emission radius ($r = 1.5\text{ m}$).                                        |
-| `Left Shift`        | [[Sprint]]                  | Increases traversal speed by 80%; expends stamina and dramatically increases audio footprint ($r = 6.0\text{ m}$). |
-| `E`                 | [[Interact]]                | Operates doors, gathers collectible documents, throws switches, and Enters/Exits hiding spots.                     |
-| `Right Click` / `F` | [[Aim & Throw Distraction]] | Displays targeted trajectory arc to toss scavenged debris (bottles, stones, scrap).                                |
-| `Space` (Hold)      | [[Breath Suppression]]      | Active during Hiding state; stops protagonist's heavy breathing while slowly building the Panic meter.             |
-| `Tab`               | [[Toggle Smartphone]]       | Opens digital map and intercepted radio feeds; continuously raises the enemy Digital Trace Level while deployed.   |
+| Input               | Action                      | Context / Notes                                                                                                  |
+| ------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `W / A / S / D`     | [[Movement]]                | Standard walking speed; minimal sound emission radius.                                                           |
+| `Left Shift`        | [[Sprint]]                  | Increases traversal speed by 80%; expends stamina and dramatically increases audio footprint.                    |
+| `E`                 | [[Interact]]                | Operates doors, gathers collectible documents, throws switches, and Enters/Exits hiding spots.                   |
+| `Right Click` / `F` | [[Aim & Throw Distraction]] | Displays targeted trajectory arc to toss scavenged debris (bottles, stones, scrap).                              |
+| `Space` (Hold)      | [[Breath Suppression]]      | Active during Hiding state; stops protagonist's heavy breathing while slowly building the Panic meter.           |
+| `Tab`               | [[Toggle Smartphone]]       | Opens digital map and intercepted radio feeds; continuously raises the enemy Digital Trace Level while deployed. |
 ## Game Rules & Logic
 > [!info] Guideline
 > Define the operational boundary rules, victory/defeat criteria, and state-persistence systems governing the game session.
