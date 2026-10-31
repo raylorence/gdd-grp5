@@ -5,9 +5,14 @@
 > > [!hint]
 > > Present screenshots of the games and media you are referencing
 
-- **Visual Style:** (e.g., Low-Poly 3D, Pixel Art, Vector 2D, Realistic)
-- **Reference Titles:** (List comparative games for lighting, asset style, or UI design)
-- **Color Palette:** (Define functional color groupings (e.g., background, foreground, interactive elements))
+- **Primary Visual Style:** Gritty 2D Pixel Art with atmospheric dynamic lighting and environmental shadow effects.
+- **Camera Perspective:** Top-down 2D exploration with a transition into a first-person vignette when hiding.
+- **Art Direction:** Semi-realistic pixel art emphasizing dense urban environments, deteriorating infrastructure, and grounded Philippine street architecture.
+- **Environmental Design:** Narrow residential alleys, rusted galvanized iron roofs (yero), hanging electrical wires, sari-sari stores, wet market stalls, drainage canals, and makeshift barricades. Environments should feel cramped, lived-in, and difficult to navigate.
+- **Lighting:** Strong contrasts between darkness and artificial light. Flickering streetlights, fluorescent market bulbs, flashlight cones, and reflections on rain-soaked surfaces establish visibility hazards.
+- **Character Design:** Small, recognizable pixel sprites with muted clothing and readable silhouettes. Police officers feature darker uniforms, helmets, and prominent flashlight beams to communicate danger.
+- **Animation Style:** Limited but expressive frame-based animations for walking, sprinting, crouching, interacting, and hiding. Subtle environmental animations include rainfall, flickering lights, moving tarps, and dripping water.
+- **Visual Atmosphere:** Oppressive, claustrophobic, and grounded. Horror emerges from surveillance, isolation, and vulnerability rather than graphic violence or excessive jump scares.
 # User Interface (HUD)
 
 > [!info] Guideline
