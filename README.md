@@ -1,6 +1,6 @@
 # 00_Studio_Profile
 
-> ![Pa-north Game Studio Logo](assets/studio_logo.png)
+![Pa-north Game Studio Logo](assets/studio_logo.png)
 ## Studio Tagline / Mission:
 
 > [!info]
